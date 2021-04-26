@@ -132,6 +132,21 @@ cross-digests:
 	    $(MAKE) -C $${cross} digests ; \
 	done
 
+.PHONY: pkg-info
+pkg-info:
+	@for pkg in $(dir $(wildcard cross/*/Makefile)) $(dir $(wildcard native/*/Makefile)) ; \
+	do \
+	    $(MAKE) -C $${pkg} pkg-info.json ; \
+	done
+
+.PHONY: pkg-info-clean
+pkg-info-clean:
+	@for pkg in $(dir $(wildcard cross/*/Makefile)) $(dir $(wildcard native/*/Makefile)) ; \
+	do \
+	    $(MAKE) -C $${pkg} pkg-info-clean ; \
+	done
+clean: pkg-info-clean
+
 jsonlint:
 ifeq (,$(shell which jsonlint))
 	$(error "jsonlint not found, install with: npm install -g jsonlint")

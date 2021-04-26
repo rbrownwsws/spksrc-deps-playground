@@ -154,3 +154,23 @@ $(DOWNLOAD_COOKIE): $(POST_DOWNLOAD_TARGET)
 else
 download: ;
 endif
+
+.PHONY: pkg-info.json
+pkg-info.json:
+	@echo "{" > $@
+	@echo "  \"PKG_NAME\":\"$(PKG_NAME)\"," >> $@
+	@echo "  \"PKG_VERS\":\"$(PKG_VERS)\"," >> $@
+	@echo "  \"PKG_EXT\":\"$(PKG_EXT)\"," >> $@
+	@echo "  \"PKG_DIST_NAME\":\"$(PKG_DIST_NAME)\"," >> $@
+	@echo "  \"PKG_DIST_SITE\":\"$(PKG_DIST_SITE)\"," >> $@
+	@echo "  \"PKG_DIR\":\"$(PKG_DIR)\"," >> $@
+	@echo "  \"PKG_DOWNLOAD_METHOD\":\"$(PKG_DOWNLOAD_METHOD)\"," >> $@
+	@echo "  \"PKG_GIT_HASH\":\"$(PKG_GIT_HASH)\"," >> $@
+	@echo "  \"DEPENDS\":\"$(DEPENDS)\"" >> $@
+	@echo "}" >> $@
+
+.PHONY: pkg-info-clean
+pkg-info-clean:
+	rm pkg-info.json
+
+clean: pkg-info-clean

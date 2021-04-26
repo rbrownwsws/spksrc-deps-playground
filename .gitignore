@@ -11,3 +11,4 @@ toolkit/*/work*
 local.mk
 *.DS_Store
 *~
+pkg-info.json
