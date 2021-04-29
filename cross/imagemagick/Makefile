@@ -1,5 +1,5 @@
 PKG_NAME = ImageMagick
-PKG_VERS = 7.0.8-53
+PKG_VERS = 7.0.8-68
 PKG_EXT = tar.gz
 PKG_DIST_NAME = $(PKG_VERS).$(PKG_EXT)
 PKG_DIST_SITE = https://github.com/ImageMagick/ImageMagick/archive
