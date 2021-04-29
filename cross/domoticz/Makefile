@@ -1,5 +1,5 @@
 PKG_NAME = domoticz
-PKG_VERS = 4.9700
+PKG_VERS = 4.10717.0
 PKG_EXT = tar.gz
 PKG_DIST_NAME = $(PKG_VERS).$(PKG_EXT)
 PKG_DIST_SITE = https://github.com/domoticz/domoticz/archive
