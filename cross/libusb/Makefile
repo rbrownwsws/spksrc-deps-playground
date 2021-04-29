@@ -1,5 +1,5 @@
 PKG_NAME = libusb
-PKG_VERS = 1.0.23
+PKG_VERS = 1.0.24
 PKG_EXT = tar.gz
 PKG_DIST_NAME = v$(PKG_VERS).$(PKG_EXT)
 PKG_DIST_SITE = https://github.com/libusb/libusb/archive
