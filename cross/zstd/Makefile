@@ -1,6 +1,6 @@
 PKG_NAME = zstd
 # warning: 1.4.4 and 1.4.5 fail for arch-aarch64
-PKG_VERS = 1.4.8
+PKG_VERS = 1.4.9
 PKG_EXT = tar.gz
 PKG_DIST_NAME = $(PKG_NAME)-$(PKG_VERS).$(PKG_EXT)
 PKG_DIST_SITE = https://github.com/facebook/zstd/releases/download/v${PKG_VERS}
