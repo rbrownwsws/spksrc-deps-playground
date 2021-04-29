@@ -20,7 +20,8 @@ jobs:
       - uses: actions/checkout@v2
       
       # Run the spksrc-deps action
-      - uses: rbrownwsws/spksrc-deps@5eba953b7d4e8e7e483d60ee619cd33ea33c5e13
+      # N.B. Do not use `master` in a real project. Pin at a tag instead
+      - uses: rbrownwsws/spksrc-deps@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
